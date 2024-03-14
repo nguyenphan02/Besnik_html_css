@@ -78,20 +78,31 @@ a:active {
 }
 
 /* Navbar */
-.navbar .list {
+.navbar .nav-list {
     display: flex;
     gap: 40px;
 }
 
-.navbar .list a {
+.navbar .item {
+    text-align: center;
     font-size: 1.6rem;
     font-weight: 400;
     color: #2f3a3b;
 }
 
-.navbar .list a:hover {
+.navbar .item::before {
+    font-weight: 600;
+    content: attr(title);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.navbar .item:hover {
     font-weight: 600;
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 /* Actions */
